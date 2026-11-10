@@ -38,7 +38,7 @@ const promise3 = new Promise((resolve) =>{
 
 Promise.all([promise1,promise2,promise3])
 	.then((results) => {
-		const totalTime = (performance.now() - startTime)/1000;
+		const totalTime = Math.max(...results.map(result => result.time));
 		table.innerHTML = "";
 
 		results.forEach((result) => {
