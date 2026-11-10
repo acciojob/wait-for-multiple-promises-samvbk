@@ -8,7 +8,7 @@ const promise1 = new Promise((resolve) => {
 
 	setTimeout(() => {
 		resolve({
-			task:"task 1",
+			task:"Promise 1",
 			time:seconds
 		});
 	},seconds * 1000);
@@ -19,7 +19,7 @@ const promise2 = new Promise((resolve) => {
 
 	setTimeout(() => {
 		resolve({
-			task:"task 2",
+			task:"Promise 2",
 			time:seconds
 		});
 	},seconds*1000);
@@ -30,7 +30,7 @@ const promise3 = new Promise((resolve) =>{
 
 	setTimeout(() => {
 		resolve({
-			task:"task 3",
+			task:"Promise 3",
 			time:seconds
 		});
 	},seconds*1000);
@@ -62,7 +62,7 @@ Promise.all([promise1,promise2,promise3])
 		totalCell.textContent = "Total";
 
 		const totalTimeCell = document.createElement("td");
-		totalTimeCell.textContent = totalTime.toFixed(2) + "seconds";
+		totalTimeCell.textContent = totalTime.toFixed(2) + " seconds";
 
 		totalRow.appendChild(totalCell);
 		totalRow.appendChild(totalTimeCell);
